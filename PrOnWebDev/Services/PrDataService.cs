@@ -47,7 +47,7 @@ namespace PrOnWeb.Services
             string Sql = "SELECT cast(ROW_NUMBER() over(order by (AspnetUsers.UserName)) AS int) AS Id, 0 AS User_Id, AspNetUsers.UserName AS Org, AspNetRoles.Name AS Dep, '' AS Sec, ";
             Sql += " Wf_Order, WorkflowAuthos.BudgetRange1, WorkflowAuthos.BudgetRange2, WorkflowAuthos.BudgetRange3, ";
             Sql += " WorkflowAuthos.BudgetRange4, WorkflowAuthos.BudgetRange5, CAST(0 AS BIT) AS IsSm, CAST(0 AS BIT) AS IsDm, CAST(0 AS BIT) AS IsAccount, ";
-            Sql += " CAST(0 AS BIT) AS IsCoSign, CAST(0 AS BIT) AS IsPsMember, CAST(0 AS BIT) AS IsPhMember, CAST(0 AS BIT) AS IsRequester, CAST(0 AS BIT) AS IsPM ";
+            Sql += " CAST(0 AS BIT) AS IsCoSign, CAST(0 AS BIT) AS IsPsMember, CAST(0 AS BIT) AS IsPhMember, CAST(0 AS BIT) AS IsRequester, CAST(0 AS BIT) AS IsPM ,Wf_Position";
             Sql += " FROM AspNetRoles INNER JOIN ";
             Sql += "                      AspNetUserRoles ON AspNetRoles.Id = AspNetUserRoles.RoleId INNER JOIN ";
             Sql += "                      AspNetUsers ON AspNetUserRoles.UserId = AspNetUsers.Id INNER JOIN ";
