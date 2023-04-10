@@ -300,7 +300,7 @@ else
                 <GridColumn Field=@nameof(PRItem.Delete_Status) HeaderText="Delete" TextAlign="TextAlign.Center" Width="80" HeaderTextAlign="TextAlign.Center">
                     <Template>
                         @{ var prItem0 = (context as PRItem);
-                            if (prItem0.Delete_Status != null && prItem0.Delete_Status.StartsWith("DEL"))
+                            if (prItem0.Delete_Status != null && (prItem0.Delete_Status.StartsWith("DEL")||prItem0.Delete_Status.StartsWith("X")))
                             {
                                 <span style="color:red;"><i class="fa fa-trash"></i></span>
                             } }
