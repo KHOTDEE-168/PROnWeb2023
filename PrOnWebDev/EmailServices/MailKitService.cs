@@ -43,7 +43,7 @@ namespace PrOnWeb.EmailServices
             using var smtp = new SmtpClient();
             //smtp.Connect(_appSettings.SmtpServer, _appSettings.SmtpPort, SecureSocketOptions.StartTls);
             //smtp.Authenticate(_appSettings.SmtpUsername, _appSettings.SmtpPassword);
-            smtp.Connect("RSIMGS.RSI.CO.JP", _appSettings.SmtpPort, SecureSocketOptions.None);
+            smtp.Connect(_appSettings.SmtpServer, _appSettings.SmtpPort, SecureSocketOptions.None);
             smtp.Send(email);
             smtp.Disconnect(true);
         }
@@ -115,7 +115,7 @@ namespace PrOnWeb.EmailServices
             using var smtp = new SmtpClient();
             //smtp.Connect(_appSettings.SmtpServer, _appSettings.SmtpPort, SecureSocketOptions.StartTls);
             //smtp.Authenticate(_appSettings.SmtpUsername, _appSettings.SmtpPassword);
-            smtp.Connect("RSIMGS.RSI.CO.JP", _appSettings.SmtpPort, SecureSocketOptions.None);
+            smtp.Connect(_appSettings.SmtpServer, _appSettings.SmtpPort, SecureSocketOptions.None);
             smtp.Send(email);
             smtp.Disconnect(true);
         }
@@ -134,7 +134,7 @@ namespace PrOnWeb.EmailServices
             using var smtp = new SmtpClient();
             //smtp.Connect(_appSettings.SmtpServer, _appSettings.SmtpPort, SecureSocketOptions.StartTls);
             //smtp.Authenticate(_appSettings.SmtpUsername, _appSettings.SmtpPassword);
-            smtp.Connect("RSIMGS.RSI.CO.JP", _appSettings.SmtpPort, SecureSocketOptions.None);
+            smtp.Connect(_appSettings.SmtpServer, _appSettings.SmtpPort, SecureSocketOptions.None);
             smtp.Send(email);
             smtp.Disconnect(true);
         }
